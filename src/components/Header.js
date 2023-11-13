@@ -30,7 +30,7 @@ function Header() {
     <AppBar position="static" color="primary">
       <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant="h5" style={{ flex: 2, textAlign: "left" }}>
-          Gesture-based Map Interaction
+          John R. Borchert Map Library x GeoCommons
         </Typography>
         <Tooltip title="Information">
           <IconButton
