@@ -58,10 +58,10 @@ const Sidebar = ({ children }) => {
           <>
             <div style={{ fontSize: 13 }}>
               <br />
-              <b>&nbsp;&nbsp;Comparing Land Use in the Twin Cities Metropolitan Area</b>
+              <b>&nbsp;&nbsp;Comparing Land Use in the TMCA</b>
               <br />
               <br />
-              &nbsp;&nbsp;Twin Cities Metropolitan Area Generalized Land Use
+              &nbsp;&nbsp;TCMA Generalized Land Use
               <br />
               <br />
               &nbsp;&nbsp; Interactive Map
