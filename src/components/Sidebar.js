@@ -4,7 +4,6 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 // You can import ImageIcon if you want to use a generic image icon,
 // or you can use custom images by setting the src attribute on Avatar.
 import ImageIcon from '@mui/icons-material/Image';
-import Avatar from '@mui/material/Avatar';
 
 
 const Sidebar = () => {
