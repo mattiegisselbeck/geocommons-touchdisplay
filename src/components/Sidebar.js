@@ -4,9 +4,14 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const Sidebar = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [iframeUrl, setIframeUrl] = useState('');
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleMenuClick = (url) => {
+    setIframeUrl(url);
   };
 
   return (
@@ -56,31 +61,28 @@ const Sidebar = ({ children }) => {
       >
         {isSidebarOpen && (
           <>
-            <div style={{ fontSize: 13 }}>
+            <div style={{ fontSize: 24 }}>
               <br />
-              <b>&nbsp;&nbsp;Comparing Land Use in the TMCA</b>
-              <br />
-              <br />
-              &nbsp;&nbsp;TMCA Generalized Land Use
+              <b>&nbsp;&nbsp;Menu</b>
               <br />
               <br />
-              &nbsp;&nbsp;TBD
+              <button onClick={() => handleMenuClick('https://example.com/page1')}>Page 1</button>
               <br />
+              <button onClick={() => handleMenuClick('https://example.com/page2')}>Page 2</button>
               <br />
-              &nbsp;&nbsp;TBD
+              <button onClick={() => handleMenuClick('https://example.com/page3')}>Page 3</button>
               <br />
-              <br />
-              &nbsp;&nbsp;TBD
-              <br />
-              <br />
-              &nbsp;&nbsp;TBD
-              <br />
+              {/* Add more menu items as needed */}
             </div>
           </>
         )}
       </div>
+      {iframeUrl && (
+        <iframe src={iframeUrl} style={{ width: '100%', height: '100vh' }} title="content" />
+      )}
     </div>
   );
 };
 
 export default Sidebar;
+
