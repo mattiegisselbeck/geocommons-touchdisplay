@@ -17,7 +17,7 @@ const Page = () => {
             height="100%"
             width="100%;"
             title="Minnesota Historic Land Use StoryMap"
-            src="https://arcg.is/1eXbmr"
+            src="https://umn.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=0565ed7e8c674f519b386e43ceeedac7"
             frameborder="no"
             allowtransparency="true"
             allowfullscreen="true"
