@@ -16,22 +16,12 @@ const Page = () => {
           <iframe
             height="100%"
             width="100%;"
-            scrolling="no"
-            title="Gesture Map Control"
-            src="https://codepen.io/Luke-Zaruba/embed/preview/YzdrryL?default-tab=result"
+            title="Minnesota Historic Land Use StoryMap"
+            src="https://arcg.is/1eXbmr"
             frameborder="no"
-            loading="lazy"
             allowtransparency="true"
             allowfullscreen="true"
-            allow="camera"
           >
-            See the Pen{" "}
-            <a href="https://codepen.io/Luke-Zaruba/pen/YzdrryL">
-              Gesture Map Control
-            </a>{" "}
-            by Luke Zaruba (
-            <a href="https://codepen.io/Luke-Zaruba">@Luke-Zaruba</a>) on{" "}
-            <a href="https://codepen.io">CodePen</a>.
           </iframe>
         </div>
       </div>
