@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { IconButton } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
-const Sidebar = ({ children }) => {
+const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [iframeUrl, setIframeUrl] = useState('');
+  const [activeFrame, setActiveFrame] = useState(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleMenuClick = (url) => {
-    setIframeUrl(url);
+  const handleMenuItemClick = (frame) => {
+    setActiveFrame(frame);
   };
 
   return (
@@ -51,7 +51,6 @@ const Sidebar = ({ children }) => {
           <ChevronLeftIcon />
         </IconButton>
       </div>
-      {children}
       <div
         style={{
           display: "flex",
@@ -61,24 +60,35 @@ const Sidebar = ({ children }) => {
       >
         {isSidebarOpen && (
           <>
-            <div style={{ fontSize: 24 }}>
+            <div style={{ fontSize: 13 }}>
               <br />
-              <b>&nbsp;&nbsp;Menu</b>
+              <b>&nbsp;&nbsp;Comparing Land Use in the TMCA</b>
               <br />
               <br />
-              <button onClick={() => handleMenuClick('https://example.com/page1')}>Page 1</button>
+              <div
+                style={{ cursor: 'pointer' }}
+                onClick={() => handleMenuItemClick('generalLandUse')}
+              >
+                &nbsp;&nbsp;TMCA Generalized Land Use
+              </div>
               <br />
-              <button onClick={() => handleMenuClick('https://example.com/page2')}>Page 2</button>
-              <br />
-              <button onClick={() => handleMenuClick('https://example.com/page3')}>Page 3</button>
-              <br />
-              {/* Add more menu items as needed */}
+              {/* Additional menu items with onClick handlers */}
+              {/* Add more divs with onClick here for other menu items */}
+              {/* Each div should call handleMenuItemClick with a unique frame identifier */}
             </div>
           </>
         )}
       </div>
-      {iframeUrl && (
-        <iframe src={iframeUrl} style={{ width: '100%', height: '100vh' }} title="content" />
+      {/* iframe rendering based on activeFrame */}
+      {activeFrame && (
+        <iframe
+          src={activeFrame}
+          style={{
+            width: '100%',
+            height: '100%',
+            border: 'none',
+          }}
+        />
       )}
     </div>
   );
