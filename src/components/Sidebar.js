@@ -56,9 +56,9 @@ const Sidebar = ({ children }) => {
       >
         {isSidebarOpen && (
           <>
-            <div style={{ fontSize: 24 }}>
+            <div style={{ fontSize: 13 }}>
               <br />
-              <b>&nbsp;&nbsp;Gestures</b>
+              <b>&nbsp;&nbsp;Comparing Land Use in the Twin Cities Metropolitan Area</b>
               <br />
               <br />
               &nbsp;&nbsp;✊ Pan map
