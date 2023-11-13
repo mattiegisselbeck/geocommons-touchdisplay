@@ -51,24 +51,7 @@ function Header() {
             <DialogContentText>
               This application enables users to interact with maps via hand
               gestures.
-              <br />
-              <br />
-              <b>Gestures</b>
-              <br />✊ Use a closed fist and move your hand to pan the map in
-              the direction you move your hand.
-              <br />
-              👍 Use a thumbs up to zoom out.
-              <br />
-              👎 Use a thumbs down to zoom in.
-              <br />
-              ☝️ Use your index finger pointing up to return to the initial map
-              position.
-              <br />
-              ✌️ Use the Victory Hand/Peace Sign symbol to turn gesture controls
-              off.
-              <br />
-              <br />
-              Created by Luke Zaruba, University of Minnesota, MGIS Program
+              Created by Mattie Gisselbeck & Luke Zaruba
             </DialogContentText>
           </DialogContent>
           <DialogActions>
