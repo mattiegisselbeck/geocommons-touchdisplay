@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { IconButton } from "@mui/material";
+import { IconButton, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+// Import additional icons here
+import LandscapeIcon from '@mui/icons-material/Landscape';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import PlaceIcon from '@mui/icons-material/Place';
+import MapIcon from '@mui/icons-material/Map';
+import InfoIcon from '@mui/icons-material/Info';
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -51,34 +57,49 @@ const Sidebar = () => {
           <ChevronLeftIcon />
         </IconButton>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        {isSidebarOpen && (
-          <>
-            <div style={{ fontSize: 13 }}>
-              <br />
-              <b>&nbsp;&nbsp;Comparing Land Use in the TMCA</b>
-              <br />
-              <br />
-              <div
-                style={{ cursor: 'pointer' }}
-                onClick={() => handleMenuItemClick('generalLandUse')}
-              >
-                &nbsp;&nbsp;TMCA Generalized Land Use
-              </div>
-              <br />
-              {/* Additional menu items with onClick handlers */}
-              {/* Add more divs with onClick here for other menu items */}
-              {/* Each div should call handleMenuItemClick with a unique frame identifier */}
-            </div>
-          </>
-        )}
-      </div>
+      {isSidebarOpen && (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            fontSize: 13,
+            paddingLeft: '10px' // padding inside the sidebar
+          }}
+        >
+          <ListItem button onClick={() => handleMenuItemClick('generalLandUse')}>
+            <ListItemIcon>
+              <LandscapeIcon />
+            </ListItemIcon>
+            <ListItemText primary="TMCA Generalized Land Use" />
+          </ListItem>
+          {/* Additional menu items with icons */}
+          <ListItem button onClick={() => handleMenuItemClick('frame2')}>
+            <ListItemIcon>
+              <AssessmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="TMCA Analysis" />
+          </ListItem>
+          <ListItem button onClick={() => handleMenuItemClick('frame3')}>
+            <ListItemIcon>
+              <PlaceIcon />
+            </ListItemIcon>
+            <ListItemText primary="TMCA Locations" />
+          </ListItem>
+          <ListItem button onClick={() => handleMenuItemClick('frame4')}>
+            <ListItemIcon>
+              <MapIcon />
+            </ListItemIcon>
+            <ListItemText primary="TMCA Mapping" />
+          </ListItem>
+          <ListItem button onClick={() => handleMenuItemClick('frame5')}>
+            <ListItemIcon>
+              <InfoIcon />
+            </ListItemIcon>
+            <ListItemText primary="TMCA Information" />
+          </ListItem>
+        </div>
+      )}
       {/* iframe rendering based on activeFrame */}
       {activeFrame && (
         <iframe
