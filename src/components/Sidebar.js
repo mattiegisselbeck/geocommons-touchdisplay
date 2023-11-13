@@ -61,19 +61,19 @@ const Sidebar = ({ children }) => {
               <b>&nbsp;&nbsp;Comparing Land Use in the TMCA</b>
               <br />
               <br />
-              &nbsp;&nbsp;TCMA Generalized Land Use
+              &nbsp;&nbsp;TMCA Generalized Land Use
               <br />
               <br />
-              &nbsp;&nbsp; Interactive Map
+              &nbsp;&nbsp;TBD
               <br />
               <br />
-              &nbsp;&nbsp;Zoom in
+              &nbsp;&nbsp;TBD
               <br />
               <br />
-              &nbsp;&nbsp;☝️ Return to home position
+              &nbsp;&nbsp;TBD
               <br />
               <br />
-              &nbsp;&nbsp;✌️ Exit gesture recognition
+              &nbsp;&nbsp;TBD
               <br />
             </div>
           </>
