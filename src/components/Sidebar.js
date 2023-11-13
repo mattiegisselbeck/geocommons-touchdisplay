@@ -64,7 +64,14 @@ const Sidebar = () => {
       )}
       {/* iframe rendering based on activeFrame */}
       {activeFrame && (
-        // ... iframe styles remain unchanged
+        <iframe
+          src={activeFrame} // Make sure to replace this with your actual logic to determine the iframe source
+          style={{
+            width: '100%',
+            height: '100%',
+            border: 'none',
+          }}
+        />
       )}
     </div>
   );
