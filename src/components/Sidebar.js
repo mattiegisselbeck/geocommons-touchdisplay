@@ -64,7 +64,7 @@ const Sidebar = ({ children }) => {
               &nbsp;&nbsp;Twin Cities Metropolitan Area Generalized Land Use
               <br />
               <br />
-              &nbsp;&nbsp;Zoom out
+              &nbsp;&nbsp; Interactive Map
               <br />
               <br />
               &nbsp;&nbsp;Zoom in
